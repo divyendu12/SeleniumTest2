@@ -24,7 +24,7 @@ public class PetStore {
 	public void LaunchTest()
 	{
 		driver.get("http://127.0.0.1:8081/JpetStore/");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 	@Test
 	public void ClickLink()
