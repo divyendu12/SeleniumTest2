@@ -29,7 +29,7 @@ public class PetStore {
 	@Test
 	public void ClickLink()
 	{
-		driver.findElement(By.xpath("//*[@id='Content']/p[1]")).click();
+		driver.findElement(By.xpath("//*[@id='Content']")).click();
 	}
 	
 	@AfterTest
