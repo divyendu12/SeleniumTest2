@@ -21,16 +21,24 @@ public class PetStore {
 	}
 
 	@Test
-	public void LaunchTest()
+	public void LaunchTest() throws InterruptedException 
 	{
+		
 		driver.get("http://127.0.0.1:8081/JpetStore/");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		Thread.sleep(1000);
+		//driver.manage().timeouts().pageLoadTimeout(1000,TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.findElement(By.xpath(".//*[@id='Content']/p[1]/a")).click();
+		//driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(1000,TimeUnit.SECONDS);
+		Thread.sleep(10000);
 	}
-	@Test
+	/*@Test
 	public void ClickLink()
 	{
-		driver.findElement(By.xpath("//*[@id='Content']")).click();
-	}
+		
+		
+	}*/
 	
 	@AfterTest
 	
